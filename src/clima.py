@@ -1,7 +1,7 @@
 import os
 import requests
 from dotenv import load_dotenv
-
+print("Buscando en caché...")
 # Cargar variables de entorno
 load_dotenv()
 
@@ -26,3 +26,4 @@ def get_clima(ciudad: str) -> dict:
     if response.status_code == 200:
         return response.json()
     return {"error": "No se pudo obtener el clima"}
+# Cambio final para activar el Pull Request
